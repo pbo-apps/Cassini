@@ -58,7 +58,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="Saturn"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" id="gNv-lt-T6l"/>
+                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="Show Image" id="gNv-lt-T6l"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -128,6 +128,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LU8-Fk-ahJ"/>
+        <segue reference="8tm-Gq-qyZ"/>
     </inferredMetricsTieBreakers>
 </document>

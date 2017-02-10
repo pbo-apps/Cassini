@@ -49,7 +49,9 @@ class ImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.addSubview(imageView)
-        imageURL = NSURL(string: DemoURL.Stanford)
+        if imageURL == nil {
+            imageURL = NSURL(string: DemoURL.Stanford)
+        }
     }
     
 }
