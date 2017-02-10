@@ -11,12 +11,37 @@ import UIKit
 class ImageViewController: UIViewController {
 
     // MARK: - Model
-    var imageURL: NSURL?
+    var imageURL: NSURL? {
+        didSet {
+            image = nil
+            fetchImage()
+        }
+    }
+    
+    private func fetchImage() {
+        if let url = imageURL {
+            if let imageData = NSData(contentsOf: url as URL) {
+                image = UIImage(data: imageData as Data)
+            }
+        }
+    }
+    
+    private var imageView = UIImageView()
+    
+    private var image: UIImage? {
+        get {
+            return imageView.image
+        }
+        set {
+            imageView.image = newValue
+            imageView.sizeToFit()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        view.addSubview(imageView)
     }
     
 }
